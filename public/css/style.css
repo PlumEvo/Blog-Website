@@ -18,7 +18,7 @@ body{
     color: var(--black);
     font-size: var(--font-size-base);
     background-color: #FAF5EE;
-    background-image: url("img/img-noise-361x370.png");
+    background-image: url("/img/img-noise-361x370.png");
     margin: 0;
 }
 
@@ -50,6 +50,25 @@ textarea{
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+.log{
+    display: flex;
+    gap: 0.3rem;
+    text-decoration: none;
+    align-items: center;
+    border: 0;
+    padding: 6px 12px;
+    background: none;
+    border-radius: var(--border-radius);
+    border: 2px solid transparent;
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--black);
+}
+
+.log:hover {
+    border: 2px solid var(--black);
 }
 
 .btn-delete{
@@ -238,6 +257,7 @@ img{
 }
 .article{
     white-space: pre-wrap;
+    font-size: 25px;
 }
 
 /*Footer*/
@@ -248,10 +268,11 @@ img{
 
 /*Search Bar*/
 .searchBar {
+    display: flex;
     visibility: hidden;
     transform: translateY(-100px);
     background-color: var(--black);
-    padding: 6px 0;
+    padding: 10px 10px;
     position: absolute;
     left: 0;
     right: 0;
@@ -259,13 +280,18 @@ img{
 
 
 .searchBar.open {
+    position: relative;
     transform: translateY(0);
-    transition: transform 0.1s;
+    transition: all .5s ease-in-out;
 }
 
 .searchBar input {
     margin: 0;
     border: 0;
+    font-family:'Poppins',sans-serif;
+    width: 50rem;
+    height: 2rem;
+    font-size: 1.1rem;
 }
 
 #searchClose {
@@ -273,7 +299,10 @@ img{
     top: 0;
     right: 0;
     color: var(--gray-light);
-    padding: 15px;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 5px;
+    margin-top: 5px; margin-right: 5px;
 }
 
 /*Admin Dashboard*/
@@ -288,7 +317,12 @@ img{
     padding: 0;
     margin: 0;
 }
-  
+
+.admin-posts a{
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
 .admin-post-controls form {
     display: inline-block;
 }
@@ -299,8 +333,8 @@ img{
     color: var(--gray-light);
     border: 0;
     text-decoration: none;
-    font-size: .8rem;
-    padding: 4px 8px;
+    font-size: 1rem;
+    padding: 4px 12px;
     line-height: 2;
 }
   
@@ -335,3 +369,46 @@ img{
     margin: 4px 2px;
     cursor: pointer;
 }
+
+input.btn-delete.btn{
+    padding:4px 12px;
+}
+
+.content{
+    font-family:'Poppins',sans-serif;
+    font-size: var(--font-size-base);
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.7rem 0.75rem;
+    margin-bottom: 1rem;
+    resize: none;
+}
+hr{border: 1px solid #1c1c1c;}
+
+.lidi{
+    display: flex;
+    gap: 30px;
+}
+.lidi i {
+    display: inline-block;
+    width: 32px; height: 32px;
+    background: #323232;
+    mask-size: cover !important;
+}
+.lidi i.up { mask: url(../img/thumbs-up.svg) }
+.lidi i.down { mask: url(../img/thumbs-down.svg) }
+.lidi i.up.set { background: #462dff; }
+.lidi i.down.set { background: #dd3d3d; }
+
+div#nightowl-switcher-default{
+    position: relative;
+    left: calc(-100px + 100vw);
+    bottom: calc(137.7vw);
+}
+
+/*Card Image*/
+/* .card_image{
+    height: 600px;
+    width: 900px;
+} */

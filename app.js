@@ -7,7 +7,6 @@ const MongoStore = require("connect-mongo");
 const methodOverride = require('method-override');
 const session = require('express-session');
 
-
 //Database Connection
 const connectDB = require("./server/config/db");
 
