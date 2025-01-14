@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= locals.title %></title>
+    <meta name="description" content="<%= locals.description %>">
+    <script type="text/javascript" defer src="/js/script.js"></script>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    
+    <script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"
+    ></script>
+    
+    <script type="module">
+        import { createNightowl } from '@bufferhead/nightowl'
+        
+        createNightowl({
+            defaultMode: 'light',
+            toggleButtonMode: 'newState'
+        });
+    </script>
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+
+    <%- include('../partials/search.ejs')  %>
+    <div class="container">
+
+        <%- include('../partials/header.ejs')  %>
+        <main class="main">
+            <%- body %>
+        </main>
+        <%- include('../partials/footer.ejs')  %>
+
+    </div>
+</body>
+</html>
